@@ -1,5 +1,6 @@
 package com.example.superheroes
 
+import android.graphics.Bitmap
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.superheroes.databinding.ActivityVerDatosBinding
@@ -10,6 +11,7 @@ class VerDatosActivity : AppCompatActivity() {
     companion object{
         const val HERO_KEY = "hero_key"
         const val POWER_KEY = "power_key"
+        const val IMAGE_KEY = "image_key"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,5 +24,6 @@ class VerDatosActivity : AppCompatActivity() {
 
         viewBinding.tvNameEnviado.text = intent.getString(HERO_KEY)
         viewBinding.ratingBar.rating = intent.getFloat(POWER_KEY)
+        viewBinding.photoEnviada.setImageBitmap(intent.getParcelable<Bitmap>(IMAGE_KEY))
     }
 }
