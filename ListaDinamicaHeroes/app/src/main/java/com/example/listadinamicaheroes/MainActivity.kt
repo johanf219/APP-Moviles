@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
                         putString(getString(R.string.spUserName),userName)
                             .apply()
                     }
-                    Toast.makeText(this, "Te has regstrado correctamente querido héroe", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Registro Exitoso", Toast.LENGTH_LONG).show()
                 })
                 .show()
         }else{
